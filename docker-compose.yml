@@ -1,0 +1,14 @@
+services:
+  web:
+    image: httpd:alpine
+    container_name: webhost
+    restart: always
+    networks:
+      - webntw
+    ports:
+      - "8080:80"
+    volumes:
+      - "./webfiles/:/usr/local/apache2/htdocs/"
+
+networks:
+  webntw:
