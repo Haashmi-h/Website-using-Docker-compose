@@ -1,10 +1,37 @@
 # Website-using-Docker-compose
 Hosting a simple website using Docker compose method.
 
+</br>
+</br>
+Docker compose is a tool for defining and running multi-container Docker applications. With Compose, we use a yaml file to configure the application’s services.
+Then, with a single command, you create and start all the services from your configuration.</br>
+
+Compose works in all environments: production, staging, development, testing, as well as CI workflows. It also has commands for managing the whole lifecycle of your application:
+</br>
+
+> Start, stop, and rebuild services
+
+> View the status of running services
+
+> Stream the log output of running services
+
+> Run a one-off command on a service
+</br>
+
+
+#### The key features of Compose that make it effective are:
+
+*Have multiple isolated environments on a single host* </br>
+*Preserves volume data when containers are created* </br>
+*Only recreate containers that have changed* </br>
+*Supports variables and moving a composition between environments* </br>
+
+</br>
+
 
 ### Installation of Docker Composer:
 
->> Installed composer and provided execute permission.
+ Installed composer and provided execute permission.
 
 ```sh
 [ec2-user@instance1 ~]$ sudo curl -SL https://github.com/docker/compose/releases/download/v2.6.0/docker-compose-linux-x86_64 -o /usr/bin/docker-comp ose
@@ -20,8 +47,9 @@ Docker Compose version v2.6.0
 [ec2-user@instance1 ~]$
 ```
 
+You can refer to [Docker compose Installation guide](https://docs.docker.com/compose/install/)
 
->> Created a project directory, then inserted yaml file and uploaded contents from a website template to another folder "webfiles":
+Created a project directory, then inserted yaml file and uploaded contents from a website template to another folder "webfiles":
 
 ```sh
 [ec2-user@instance1 ~]$ mkdir web-project
@@ -69,6 +97,11 @@ networks:
 ```
 
 </br>
+
+The above YAML file contains creation of following services: </br>
+1) Service definition to create a container with name, docker image, network, port publishing, restart policy and volume to bind mount.
+2) Creation of custom network(bridge by default). 
+
 </br>
 
 Created container from this:
