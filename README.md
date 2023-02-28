@@ -27,6 +27,10 @@ Compose works in all environments: production, staging, development, testing, as
 *Supports variables and moving a composition between environments* </br>
 
 </br>
+We are hosting a website via Docker container using the resources passed via Docker compose.</br>
+
+![Untitled Diagram drawio (3)](https://user-images.githubusercontent.com/117455666/221944137-56283896-0210-4c1c-bc96-b2af03ff4366.png)
+</br>
 
 
 ### Installation of Docker Composer:
